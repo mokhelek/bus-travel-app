@@ -4,12 +4,17 @@ function busTravel(){
     let travelPointsAmount = 0 ;
     let departureLocation = "" ;
     
+    let travelCostObj = {
+        "Khayelitsha" : 40,
+        "Dunoon" : 25,
+        "Mitchells Plain" :30
+    }
 
     function setTravelPointsAmount(amount){
         travelPointsAmount = amount ;
     }
 
-    function getTravelAmount(){
+    function getTravelPointsAmount(){
         return travelPointsAmount ;
     }
 
@@ -21,12 +26,18 @@ function busTravel(){
         return departureLocation ;
     }
 
+    function peakOrOffPeak(time){
+        if(time == "peak"){
+            travelPointsAmount += 0.25 * getTravelPointsAmount() ;
+        }
+    }
+
 
     return {
         setTravelPointsAmount,
         setDepartureLocation,
 
-        getTravelAmount,
+        getTravelPointsAmount,
         getDepartureLocation
     }
 }

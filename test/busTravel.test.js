@@ -6,7 +6,7 @@ describe("Testing The Bus Travel Functionalities", function(){
         busTravelInstance.setTravelPointsAmount(50);
 
 
-        assert.equal(50, busTravelInstance.getTravelAmount() )
+        assert.equal(50, busTravelInstance.getTravelPointsAmount() )
     })
     it("should allow points amount to be changed", function(){
         const busTravelInstance = busTravel() ;
@@ -18,7 +18,7 @@ describe("Testing The Bus Travel Functionalities", function(){
         busTravelInstance.setTravelPointsAmount(165);
 
 
-        assert.equal(165, busTravelInstance.getTravelAmount() )
+        assert.equal(165, busTravelInstance.getTravelPointsAmount() )
     })
     it("should be able to set the departure location", function(){
         const busTravelInstance = busTravel() ;

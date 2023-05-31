@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bus Travel | Mokhele Katleho</title>
+</head>
+
+
+<body>
+    <br>
+    <center><h2>Bus Travel Widget</h2></center>
+ <br>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="col-8">
+            <h4>Travel Times</h4>
+
+            <table   style="width:100%;" >
+                <tr>
+                    <td style="width: 70%;">
+                     Points :
+                    </td>
+                    <td style="width: 30%;" >
+                        <input type="number" name="points" id="pointsInput"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;">
+                     Start Location :
+                    </td>
+                    <td style="width: 30%;" >
+                        <input type="number" name="points" id="pointsInput"> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <br>
+
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="col-8">
+            <h4>Travel Times</h4>
+
+            <table   style="width:100%;" >
+                <tr>
+                    <td style="width: 70%;">
+                        <input class="time" type="radio" id="peak" name="peakTime" value="peak" >
+                        <label for="peak">
+                            Peak
+                        </label>
+                        <br><br>
+                        <input class="time" type="radio" id="off-peak" name="peakTime" value="off-peak" >
+                        <label for="off-peak">
+                            Off-Peak
+                        </label>
+                    </td>
+                    <td style="width: 30%;" >
+                        <input type="checkbox" name="returnCheck" id="returnCheck">
+                        <label for="returnCheck">
+                            Return Trip
+                        </label>
+                        <br><br>
+                        <button class="btn btn-md btn-primary" >Calculate</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="col-8">
+            <center><h3>Calculations</h3> </center>
+
+            <table   style="width:100%;" >
+                <tr>
+                    <td style="width: 70%;">
+                        Number of single trips
+                    </td>
+                    <td style="width: 30%;" >
+                        5
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;">
+                        Price per trip (single)
+                    </td>
+                    <td style="width: 30%;" >
+                        5
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;">
+                        Number of return trips
+                    </td>
+                    <td style="width: 30%;" >
+                        5
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;">
+                        Price per trip (return)
+                    </td>
+                    <td style="width: 30%;" >
+                        5
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
