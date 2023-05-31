@@ -44,3 +44,12 @@ select{
     display: flex;
     justify-content: center;
 }
+
+.errors{
+    background-color: orange;
+    justify-content: center;
+    padding: 0.6rem;
+    width: 50%;
+    margin-bottom: 0.8rem;
+    display: none;
+}

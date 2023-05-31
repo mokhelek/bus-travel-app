@@ -15,6 +15,14 @@
     <center> 
         <img height="50" src="images/bus.png" alt=""><h1>Bus Travel Widget</h1> <span> </span>
         <div style="background-color: rgb(160, 44, 255);width: 150px;height: 0.6rem;" ></div>
+        <br>
+        <div class="errors"  id="points-error">
+            Please enter the Points
+        </div>
+        <div class="errors"  id="location-error">
+            
+            Please select the location 
+        </div>
     </center>
  <br>
     <div class="container-fluid d-flex justify-content-center">
@@ -41,7 +49,9 @@
                             <option value="Mitchells Plain">Mitchells Plain</option>
 
                         </select>
+                      
                     </td>
+                  
                 </tr>
             </table>
         </div>
@@ -55,7 +65,10 @@
     <div class="container-fluid d-flex justify-content-center">
         <div class="col-6">
             <h3> <img height="40" src="images/bus-schedule.png" alt=""> <span> Travel Times</span> </h3>
-
+            
+            <div class="errors"  id="time-error">
+               <center>Please select time  </center> 
+            </div>
             <table   style="width:100%;" >
                 <tr>
                     <td style="width: 70%;">

@@ -10,7 +10,7 @@ function displayInfo(){
     let returnTripElem = document.querySelector("#returnCheck") ;
 
     if(returnTripElem.checked){
-        returnPriceElem.innerHTML = busTravelInstance.getPricePerTrip() ;
+        returnPriceElem.innerHTML = (busTravelInstance.getPricePerTrip()).toFixed(2) ;
 
         returnTripsElem.innerHTML = busTravelInstance.getNumOfTrips() ;
 
@@ -18,7 +18,7 @@ function displayInfo(){
 
         singleTripsElem.innerHTML = 0 ;
     }else{
-        singlePriceElem.innerHTML = busTravelInstance.getPricePerTrip() ;
+        singlePriceElem.innerHTML = (busTravelInstance.getPricePerTrip()).toFixed(2) ;
 
         singleTripsElem.innerHTML = busTravelInstance.getNumOfTrips() ;
 
@@ -39,17 +39,48 @@ function calculateBtnClicked(){
     let timeRadio = document.querySelector(".time:checked");
     let returnTripElem = document.querySelector("#returnCheck")
 
-    busTravelInstance.setDepartureLocation(startLocations.value) ;
-    busTravelInstance.setTravelPointsAmount(Number(pointsInput.value)) ;
+    let pointsError = document.querySelector("#points-error");
+    let locationError = document.querySelector("#location-error");
+    let timeError = document.querySelector("#time-error");
 
-    busTravelInstance.returnTrip(returnTripElem.checked) ;
-    busTravelInstance.peakTime(timeRadio.value) ;
 
-    busTravelInstance.numberOfTrips()
-    busTravelInstance.setPricePerTrip()
-    displayInfo();
+
+    if(timeRadio && pointsInput.value != "" && startLocations.value != "" ){
+        busTravelInstance.setDepartureLocation(startLocations.value) ;
+        busTravelInstance.setTravelPointsAmount(Number(pointsInput.value)) ;
+    
+        busTravelInstance.returnTrip(returnTripElem.checked) ;
+        busTravelInstance.peakTime(timeRadio.value) ;
+    
+        busTravelInstance.numberOfTrips()
+        busTravelInstance.setPricePerTrip()
+        displayInfo();
+    }else{
+        // *Displaying pop-up errors based on conditions
+        if(pointsInput.value == ""){
+            pointsError.style.display = "block"
+            setTimeout(function(){
+                pointsError.style.display = "none"
+            },4000)
+        }
+        if(!timeRadio){
+            timeError.style.display = "block"
+            setTimeout(function(){
+                timeError.style.display = "none"
+            },4000)
+        }
+        if(startLocations.value == ""){
+            locationError.style.display = "block"
+            setTimeout(function(){
+                locationError.style.display = "none"
+            },4000)
+        }
+    }
+
+  
 }
 
+// * Adding event on Button
 const calculateBtn = document.querySelector(".calculate-btn");
 
 calculateBtn.addEventListener("click", function (){

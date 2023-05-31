@@ -43,6 +43,14 @@ function busTravel(){
     }
 
 
+    /*
+        * first check if a travel is a single or return
+        * then check  what time is selected
+        * if the travel is return double the cost money
+        * if the time is peak the add 25% to the cost money
+        * combine these and divide the points with the total cost 
+        * take the whole number and re-assign to num of trips
+    */
 
     function numberOfTrips(){
 
@@ -72,6 +80,9 @@ function busTravel(){
         return numOfTrips ;
     }
 
+    /*
+        * depending on whether the bool is peak or off-peak, re-assign the peakTime val
+    */
     function peakTime(bool){
         if(bool == "peak"){
            peakTimeVal = true
@@ -83,6 +94,17 @@ function busTravel(){
     function checkPeak(){
         return peakTimeVal ;
     }
+
+    /*
+        * if the trip is a return and off-peak
+        * then double the cost price
+        * if the trip is single and off-peak
+        * then the price stays the same
+        * if the trip is return and on peak
+        * the double the cost and add 25% of the cost
+        * if the trip is single and on peak
+        * the add 25% to the cost
+    */
 
     function setPricePerTrip(){
         if( checkReturnTrip() == true && checkPeak()==false){
