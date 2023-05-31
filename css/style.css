@@ -1,5 +1,24 @@
 
+ @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+ h1{
+    font-family: "Squada One";
+    font-size: 3.5rem;
+ }
+body{
+    background:linear-gradient(to right,#b6ccff,#8f6ff0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
 .content{
     margin-top: 2rem;
     width: 100%
+}
+
+td div{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
 }
