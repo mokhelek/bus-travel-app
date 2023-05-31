@@ -49,7 +49,7 @@ function busTravel(){
         
         if( checkReturnTrip() == true && checkPeak()==false){
     
-            numOfTrips = Math.trunc( travelPointsAmount/ getPricePerTrip() )
+            numOfTrips = Math.trunc( getTravelPointsAmount() / (travelCostObj[getDepartureLocation()]*2)  )
    
         }
         if(checkReturnTrip()==false && checkPeak()==false){
@@ -59,11 +59,11 @@ function busTravel(){
 
 
         if(checkReturnTrip() == true && checkPeak()==true){
-            numOfTrips = Math.trunc(getTravelPointsAmount() / (travelCostObj[getDepartureLocation()]*2) + (0.25 *travelCostObj[getDepartureLocation()]*2) )
+            numOfTrips = Math.trunc(getTravelPointsAmount() / ( (travelCostObj[getDepartureLocation()]*2) + (0.25 *travelCostObj[getDepartureLocation()]*2) ))
 
         }
         if(checkReturnTrip()==false && checkPeak()==true){
-            numOfTrips = Math.trunc(getTravelPointsAmount() / travelCostObj[getDepartureLocation()] + (0.25 *travelCostObj[getDepartureLocation()]) )
+            numOfTrips = Math.trunc(getTravelPointsAmount() / ( travelCostObj[getDepartureLocation()] + (0.25 *travelCostObj[getDepartureLocation()]) ) )
 
         }
     }
