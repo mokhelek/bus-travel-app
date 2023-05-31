@@ -1,17 +1,22 @@
 
- @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Squada+One&display=swap');
 
- h1{
-    font-family: "Squada One";
-    font-size: 3.5rem;
- }
+
+
 body{
     background:linear-gradient(to right,#b6ccff,#8f6ff0);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
+    font-family: "Roboto Condensed";
 }
 
+h1,h2,h3{
+    font-family: "Squada One";
+ }
+h1{
+    font-size: 3.5rem;
+}
 .content{
     margin-top: 2rem;
     width: 100%
@@ -19,6 +24,23 @@ body{
 
 td div{
     background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border-radius: 0 !important;
+    background-color: #6839f5 !important;
+    width: 110%;
+}
+
+select{
+    width: 170px !important;
+    height: 2.5rem;
+    border-radius:  0 !important;
+    border: gray;
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.7rem;
     display: flex;
     justify-content: center;
 }
